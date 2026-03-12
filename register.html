@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IN+Guides&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    body {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1")
+        center/cover no-repeat;
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      padding-top: 90px;
+      color: #ddd;
+    }
+    .form-control::placeholder{
+        color: gray;
+        opacity: .5;
+    }
+    .register-card {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 0 25px rgba(0,255,136,0.2);
+      opacity: 0.8;
+    }
+
+    .register-card h2 {
+      text-align: center;
+      color: lightsteelblue;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      background: #1c1c1c;
+      border: none;
+      color: #fff;
+    }
+
+    .form-control:focus {
+      background: #1c1c1c;
+      color: #fff;
+      border: 1px solid #6bb391;
+      box-shadow: none;
+    }
+    .error {
+      font-size: 0.85rem;
+      color: #ff4d4d;
+    }
+    input[type="radio"]{
+      accent-color: orange;
+    }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
+
+    footer a {
+      color: #cfe8ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar start-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-1">
+  <div class="container">
+    
+    <a class="navbar-brand fw-bold" href="index.html"><img class="fitness-logo" src="Images/logo.svg" alt="Logo" width="100px" height="60px" class="nav-logo"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+      aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item p-2"><a class="nav-link team-link text-light" href="index.html">HOME</a></li>
+        <li class="nav-item p-2"><a class="nav-link team-link text-light" href="about.html">ABOUT</a></li>
+        <li class="nav-item p-2"><a class="nav-link team-link text-light" href="workout.html">WORKOUTS</a></li>
+        <li class="nav-item p-2"><a class="nav-link team-link text-light" href="trainer.html">OUR TEAM</a></li>
+        <li class="nav-item p-2"><a class="nav-link team-link text-light" href="shoping.html">SHOP</a></li>
+        <li class="nav-item p-2"><a class="nav-link team-link text-light btn btn-outline-success ms-2" href="register.html">REGISTER NOW</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End --> 
+
+
+<div class="container d-flex justify-content-center my-5">
+  <div class="register-card">
+    <h2>Join FitLife</h2>
+
+    <form onsubmit="return validateForm()">
+
+      <div class="mb-3">
+        <label>Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter full name">
+        <div class="error" id="nameError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label>Age</label>
+        <input type="number" id="age" class="form-control" placeholder="Enter your age">
+        <div class="error" id="ageError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male" class="m-3"> Male
+        <input type="radio" name="gender" value="Female" class="m-3"> Female
+        <input type="radio" name="gender" value="Others" class="m-3"> Other
+        <div class="error" id="genderError"></div>
+      </div>
+
+
+      <div class="mb-3">
+        <label>Email</label>
+        <input type="email" id="email" class="form-control" placeholder="example@gmail.com">
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label>Mobile Number</label>
+        <input type="number" id="mobile" class="form-control" placeholder="10-digit mobile number">
+        <div class="error" id="mobileError"></div>
+      </div>
+
+      <div class="mb-3">
+        <label>Select Your Plan</label>
+        <select id="plan" class="form-control">
+          <option value="0" selected disabled>choose your plan</option>
+          <option value="1">1 Month</option>
+          <option value="2">3 Months</option>
+          <option value="3">6 Months</option>
+          <option value="4">12 Months</option>
+        </select>
+        <div class="error" id="planError"></div>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100 mt-3">Register</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer start-->
+<footer class="footer bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Brand -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">FitLife</h4>
+        <p>
+          Transform your body and mind with expert training, modern equipment,
+          and personalized fitness plans.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="workout.html">Workouts</a></li>
+          <li><a href="trainer.html">Our Team</a></li>
+          <li><a href="register.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Contact Us</h5>
+        <p><i class="fa-solid fa-phone"></i> +91-9391452521</p>
+        <p><i class="fa-solid fa-envelope"></i> praveenbollam9550@gmail.com</p>
+        <p><i class="fa-solid fa-location-crosshairs"></i>  Andhra Pradesh, India</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.146788903681!2d81.4008139767466!3d16.819072477632393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a364931a5f3a781%3A0x4b361abc8fc56720!2s9%20FITNESS!5e0!3m2!1sen!2sin!4v1770137677370!5m2!1sen!2sin" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Bottom -->
+    <div class="text-center pb-3">
+      <p class="mb-0">
+        © 2026 FitLife Fitness Club. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!--Footer end-->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function validateForm(){
+  let name = document.getElementById("name").value.trim();
+  let age = document.getElementById("age").value.trim();
+  let gender = document.querySelector('input[name="gender"]:checked');
+  let email = document.getElementById("email").value.trim();
+  let mobile = document.getElementById("mobile").value.trim();
+  let plan = document.getElementById('plan');
+  let res = "";
+
+  document.querySelectorAll(".error").forEach(e => e.innerText = "");
+  let valid = true;
+
+    if (name === "") {
+    document.getElementById("nameError").innerText = "Name is required";
+    valid = false;
+    }
+    if(!isNaN(name)){
+    document.getElementById("nameError").innerText = "Name should be letters only";
+    valid = false;
+    }
+    if(age === ""){
+      document.getElementById("ageError").innerText = "Age is required";
+     valid = false;
+    }
+    if(isNaN(age)){
+    document.getElementById("ageError").innerText = "Age should be numbers only";
+     valid = false;
+    }
+    if(age <= 0 || age >= 110){
+      document.getElementById("ageError").innerText = "Invalid Age";
+     valid = false;
+    }
+    if(!gender){
+      document.getElementById("genderError").innerText = "Please Select your gender";
+     valid = false;
+    }
+    if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)) {
+    document.getElementById("emailError").innerText = "Enter a valid Gmail address";
+    valid = false;
+  }
+  if (!/^[6-9]\d{9}$/.test(mobile)) {
+    document.getElementById("mobileError").innerText = "Invalid mobile number";
+    valid = false;
+  }
+    if(plan.value === "0"){
+    document.getElementById("planError").innerText = "Please Choose Your Plan";
+    valid =  false;
+    }
+    if(plan.value === "1"){
+      res = "Rs.999 for 1 Month";
+    }
+    if(plan.value  === "2"){
+      res = "Rs.2799 for 1 Month";
+    }
+    if(plan.value === "3"){
+      res = "Rs.5599 for 1 Month";
+    }
+    if(plan.value === "4"){
+      res = "Rs.9999 for 1 Month";
+    }
+
+  if(valid) alert("Registration Successful and the final amount is " + res);
+  return valid;
+  }
+</script>
+
+
+</body>
+</html>

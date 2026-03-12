@@ -1,0 +1,334 @@
+
+.navbar-nav .nav-link {
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(246, 70, 12) !important;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10%;
+}
+.team-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.team-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(202, 51, 51), #7d4104);
+  transition: width 0.4s ease;
+}
+
+.team-link:hover::after {
+  width: 100%;
+}
+.team-link.active::after {
+  width: 100%;
+}
+
+.fitness-logo{
+    border-radius: 50%;
+    padding-left: 0;
+    padding-right: 3px;
+}
+
+.navbar-brand{
+    padding-left: 8px;
+}
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("Images/bodyWallapaper.jpg")
+      center/cover no-repeat;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section p {
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-section .btn {
+    background-color: rgb(90, 49, 49);
+    color: wheat;
+}
+
+.hero-section .btn:hover{
+    box-shadow: 3px 3px 3px rgb(29, 79, 95);
+    color: white;
+}
+
+.hero-section .lead{
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: lightblue;
+}
+
+.hero-section .fw-bold{
+  font-family: "SN Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+.footer p {
+  color: #ccc;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d43b0c;
+  padding-left: 5px;
+}
+.about-section {
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("Images/aboutbg-image.jpg")
+      center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.about-heading{
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color:#406adc ;
+} 
+
+.about-desc {
+  font-size: 1.1rem;
+  color: #c4ced7;
+  line-height: 1.8;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.about-img {
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.25);
+}
+
+
+.about-section p{
+    font-family: "SN Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.about-section .about-title{
+    font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 45px;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.workout-detail-section {
+  background-color: #0f0f0f;
+  padding: 90px 0;
+}   
+
+.workout-title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.workout-subtitle {
+  color: #cfe8ff;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+}
+.workout-row {
+  margin-bottom: 80px;
+}
+
+.workout-img {
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.25);
+  width: 500px;
+  height: 300px;
+}
+
+.workout-img:hover{
+  transform: scale(1.1);
+}
+.workout-row h3 {
+color:#406adc ;
+  font-weight: 600;
+}
+
+.workout-row p {
+  color: #ddd;
+  line-height: 1.7;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.workout-row ul {
+  margin-top: 15px;
+}
+
+.workout-row ul li {
+  color: #cfe8ff;
+}
+
+body {
+      background-color: #0f0f0f;
+      color: #ddd;
+      padding-top: 80px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .team-title {
+      color: #fff;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 60px;
+      padding-top: 50px;
+    }
+
+    .trainer-card {
+      background: #151515;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .trainer-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .trainer-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .trainer-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .trainer-name {
+      color:#406adc ;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .trainer-role {
+      color: #cfe8ff;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .trainer-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+        font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    }
+
+     .shop-title {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      padding-top: 50px;
+    }
+
+    .product-card {
+      background: #151515;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,255,136,0.15);
+      transition: transform 0.3s ease;
+      height: 100%;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-name {
+      color:#406adc ;
+      font-size: 0.95rem;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .product-info {
+      font-size: 0.85rem;
+      color: #cfe8ff;
+      margin: 5px 10px;
+    }
+
+    .product-price {
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    .btn{
+      background-color: grey;
+    }
